@@ -1,6 +1,3 @@
-Here's the `README.md` file in English for your project:
-
-```markdown
 # Diabetes Prediction API
 
 ## Overview
@@ -8,25 +5,24 @@ The **Diabetes Prediction API** is a machine learning-based API designed to pred
 
 This project leverages **FastAPI** for the API implementation and uses a machine learning model that was trained on a dataset to predict diabetes based on various health attributes like glucose level, BMI, age, etc.
 
-## Features
-- **POST** `/diabetes_prediction`: Accepts user input and returns a prediction indicating whether the person is diabetic or not.
+## Project Structure
+```bash
+.
+├── app/                      # Contains the FastAPI application code
+│   └── main.py               # FastAPI app with the POST endpoint
+├── client/                   # Client-side code to make API requests
+│   └── diabetes_prediction_client.py  # Script to send data and get predictions
+├── model/                    # Contains the pre-trained model
+│   └── diabetes_model.sav    # Pre-trained machine learning model (Pickle format)
+├── requirements.txt          # Required dependencies for the project
+└── README.md                 # Project documentation
+```
 
 ## Technology Stack
 - **FastAPI**: For building the REST API.
 - **Pickle**: For loading the pre-trained machine learning model.
 - **Python**: Programming language.
 - **Pydantic**: For data validation and input parsing.
-
-## Project Structure
-```bash
-.
-├── app
-│   ├── main.py               # FastAPI app
-│   └── diabetes_model.sav    # Pre-trained machine learning model
-├── requirements.txt          # Required dependencies
-├── .gitignore                # Git ignore file
-└── README.md                 # Project documentation
-```
 
 ## How to Use
 
@@ -98,12 +94,12 @@ http://127.0.0.1:8000/docs
 This project is open-source and available under the [MIT License](LICENSE).
 ```
 
-This `README.md` includes:
-1. **Project Overview**: Gives visitors an idea of what the project does.
-2. **Technology Stack**: Lists the tools used to build the project.
-3. **How to Use**: Provides steps for running the API locally.
-4. **Request and Response Examples**: Shows how to make a POST request and the expected output.
-5. **API Documentation**: Provides a link to the FastAPI auto-generated documentation.
-6. **Project Structure**: Gives a brief overview of the project's file organization.
+### Notes about Project Structure:
+1. **`app/`**: Contains the FastAPI code to handle the prediction requests.
+2. **`client/`**: Contains client-side code that interacts with the API (for making requests).
+3. **`model/`**: Stores the pre-trained model in a file like `diabetes_model.sav` (Pickle format).
+4. **`requirements.txt`**: Lists all the dependencies needed to run the project.
 
-Let me know if you want to make any changes or additions!
+This structure is clear and easy to follow for users and developers. You can make the necessary adjustments if you plan to add additional details or files later.
+
+Let me know if you need any other adjustments!
